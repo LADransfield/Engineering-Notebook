@@ -1,18 +1,8 @@
 # Mathematics
 
-## Fundamentals
-
-### Algebra
-
-### Trigonometry
-
-### Calculus
-
-### Complex numbers
-
 ## Matrices
 
-### Introduction
+### Introduction to matrices
 
 #### Definition of a matrix
 
@@ -98,7 +88,7 @@ $$
 
 Matrices which are not the same size cannot be added
 
-Multiplying a matric by a scalar is also element by element:
+Multiplying a matrix by a scalar is also element by element:
 
 $$
   \begin{bmatrix}
@@ -112,7 +102,7 @@ $$
 
 The matrix can be any size when multiplying by a scalar
 
-Multiplying two matrices requires multiplying across the rows of the first matrixs, and down the columns of the second and summing the result:
+Multiplying two matrices requires multiplying across the rows of the first matrix, and down the columns of the second and summing the result:
 
 $$
   \begin{bmatrix}
@@ -142,9 +132,9 @@ $$
   \end{bmatrix}
 $$
 
-Because the rows of the first matrix are multiplied by the columns of the second, the first matric must have the same number of rows as the second's number of columns
+Because the rows of the first matrix are multiplied by the columns of the second, the first matrix must have the same number of rows as the second's number of columns
 
-The general formula for the matricplication of matrices is:
+The general formula for the multiplication of matrices is:
 
 $$
 C = A B
@@ -477,7 +467,7 @@ $$
 x^{T} Q^{T} Q x
 $$
 
-As $$Q^{T} Q = I$$, we can simplify to:
+As $Q^{T} Q = I$, we can simplify to:
 
 $$
 x^{T} x
@@ -736,7 +726,7 @@ $$
 
 ### Vector spaces
 
-#### Vector spaces
+#### Introduction to vector spaces
 
 #### Linear independence
 
@@ -772,40 +762,288 @@ $$
 
 #### Powers of a matrix
 
+---
+
 ## Differential equations
 
 ### First-order differential equations
 
+#### Euler method
+
+#### Seperable equations
+
+#### Linear first order equations
+
 ### Homogeneous linear differential equations
+
+#### Euler method for higher order ODEs
+
+#### The principle of superposition
+
+#### The wronskian
+
+#### Homogeneous second order ODE with constant coefficients
+
+#### Distinct real roots
+
+#### Complex conjugate roots
+
+#### Repeated roots
 
 ### Inhomogeneous linear differential equations
 
+#### Inhomogeneous second order ODE
+
+#### Inhomogeneous term: exponential function
+
+#### Inhomogeneous term: sine or cosine
+
+#### Inhomogeneous term: polynomials
+
+#### Resonance
+
 ### The laplace transform and series solution methods
+
+#### Definition of the laplace transform
+
+#### Laplace transform of a constant coefficient ODE
+
+#### Solution og an initial value problem
+
+#### The heaviside step function
+
+#### The dirac delta function
+
+#### Solution of a discontinuous inhomogeneous term
+
+#### Solution of an impulsive inhomogeneous term
+
+#### The series solution method
+
+#### Series solution of the Airy's equation
 
 ### Systems of differential equations
 
+#### Systems of homogeneous linear first order ODEs
+
+#### Distinct real eigenvalues
+
+#### Complex-conjugate eigenvalues
+
+#### Phase portraits
+
+#### Stable and unstable nodes
+
+#### Saddle points
+
+#### Spirals
+
+#### Coupled oscillators
+
+#### Normal modes (eigenvalues)
+
+#### Normal modes (eigenvectors)
+
 ### Partial differential equations
+
+#### Fourier series
+
+#### Fourier sine and cosine series
+
+#### The diffusion equation
+
+#### Solution of the diffusion equation: separation of variables
+
+#### Solution of the diffusion equation: eigenvalues
+
+#### Solution of the diffusion equation: Fourier series
+
+---
 
 ## Vector calculus
 
 ### Vectors
 
+#### Introduction to vectors
+
+#### Cartesian coordinates
+
+#### Dot product
+
+#### Cross product
+
+#### Quaternions
+
+#### Analytic geometry of lines
+
+#### Analytic geometry of planes
+
+#### Kronecker delta and Levi-Civita symbol
+
+#### Vector identities
+
+#### Scalar triple product
+
+#### Vector triple product
+
+#### Scalar and vector fields
+
 ### Differentiation
 
-### Integration and curbvilinear coordinates
+#### Partial derivatives
+
+#### The method of least squares
+
+#### Chain rule
+
+#### Triple product rule
+
+#### Gradient
+
+#### Divergence
+
+#### Curl
+
+#### Laplacian
+
+#### Vector derivative identities
+
+### Integration and curvilinear coordinates
+
+#### Double and triple integrals
+
+#### Polar coordinates (gradient)
+
+#### Polar coordinates (divergence and curl)
+
+#### Polar coordinates (laplacian)
+
+#### Central force
+
+#### Change of variables (single integral)
+
+#### Change of variables (double integral)
+
+#### Cylindrical coordinates
+
+#### Spherical coordinates
 
 ### Line and surface integrals
 
+#### Line integral of a scalar field
+
+#### Arc length
+
+#### Line integral of a vector field
+
+#### Work-energy theorem
+
+#### Surface integral of a scalar field
+
+#### Surface area of a sphere
+
+#### Surface integral of a vector field
+
+#### Flux integrals
+
 ### Fundamental theorems
+
+#### Gradient theorem
+
+#### Conservative vector fields
+
+### Arithemetic
+
+#### Conservation of energy
+
+#### Divergence theorem
+
+#### Continuity equation
+
+#### Green's theorem
+
+#### Stokes' theorem
+
+#### Meaning of the divergence and the curl
+
+---
 
 ## Statistics and probability
 
 ### Descriptive statistics
 
+#### Defining data
+
+#### Histograms and skewness
+
+#### Mean, median, variance, and standard deviation
+
+#### Boxplots
+
+#### Categorical data
+
+#### Hierarchical data
+
+#### Pareto charts
+
 ### Basic probability
+
+#### Probability
+
+#### Law of complements
+
+#### Mutually exclusive and independent events
+
+#### Conditional probability
+
+#### Law of total probability and Bayes' rule
 
 ### Random variables
 
-### Damplins and confidence intervals
+#### Introduction to random variables
+
+#### Mean, variance, and standard deviation of a random variable
+
+#### Mean, variance, and standard deviation for a sum of random variables
+
+#### Binomial random variable
+
+#### Poisson random variable
+
+#### Normal random variable
+
+#### Central limit theorem
+
+#### Z scores
+
+### Sampling and confidence intervals
+
+#### Populations and samples
+
+#### Point estimation of a population mean and proportion
+
+#### The standard normal
+
+#### Confidence interval estimation
+
+#### Sample size determination
+
+#### The finite correction factor
 
 ### Hypothesis testing
+
+#### Defining hypotheses
+
+#### Type I and type II error
+
+#### One sample z-test
+
+#### One sample t-test
+
+#### Single sample test for population proportion
+
+#### Testing equality of variances
+
+#### Testing the difference between two population means
+
+#### Chi-squared test for independence

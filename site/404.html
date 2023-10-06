@@ -4,20 +4,22 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Lauren Dransfield" />
-      <link rel="shortcut icon" href="/notes/img/favicon.ico" />
-    <title>Engineering notes</title>
-    <link rel="stylesheet" href="/notes/css/theme.css" />
-    <link rel="stylesheet" href="/notes/css/theme_extra.css" />
+      <link rel="shortcut icon" href="/img/favicon.ico" />
+    <title>Engineering Notebook</title>
+    <link rel="stylesheet" href="/css/theme.css" />
+    <link rel="stylesheet" href="/css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="/styles/sectionnumbers.css" rel="stylesheet" />
+        <link href="/styles/style.css" rel="stylesheet" />
     
     <!--[if lt IE 9]>
-      <script src="/notes/js/html5shiv.min.js"></script>
+      <script src="/js/html5shiv.min.js"></script>
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/C.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/C++.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/matlab.min.js"></script>
       <script>hljs.highlightAll();</script> 
 </head>
 
@@ -27,9 +29,9 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="/notes/." class="icon icon-home"> Engineering notes
+          <a href="/." class="icon icon-home"> Engineering Notebook
         </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="/notes//search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="//search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
   </form>
 </div>
@@ -37,7 +39,19 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="/notes/.">About</a>
+                <li class="toctree-l1"><a class="reference internal" href="/.">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="/mathematics/">Mathematics</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="/fluidMechanics/">Fluid Mechanics</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="/computationalFluidDynamics/">Computational Fluid Dynamics</a>
                 </li>
               </ul>
       </div>
@@ -47,13 +61,13 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="/notes/.">Engineering notes</a>
+          <a href="/.">Engineering Notebook</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="/notes/." class="icon icon-home" aria-label="Docs"></a></li>
+    <li><a href="/." class="icon icon-home" aria-label="Docs"></a></li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -94,11 +108,14 @@
     
   </span>
 </div>
-    <script src="/notes/js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "/notes/";</script>
-    <script src="/notes/js/theme_extra.js"></script>
-    <script src="/notes/js/theme.js"></script>
-      <script src="/notes/search/main.js"></script>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "/";</script>
+    <script src="/js/theme_extra.js"></script>
+    <script src="/js/theme.js"></script>
+      <script src="/javascripts/mathjax.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="/search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

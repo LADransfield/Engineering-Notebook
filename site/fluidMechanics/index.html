@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Lauren Dransfield" /><link rel="canonical" href="https://LADransfield.github.io/fluidMechanics/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Fluid Mechanics - Engineering Notebook</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../styles/sectionnumbers.css" rel="stylesheet" />
+        <link href="../styles/style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Fluid Mechanics";
+        var mkdocs_page_input_path = "fluidMechanics.md";
+        var mkdocs_page_url = "/fluidMechanics/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/C.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/C++.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/matlab.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Engineering Notebook
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../mathematics/">Mathematics</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Fluid Mechanics</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#fundamentals">Fundamentals</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#characteristics">Characteristics</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fluid-properties">Fluid properties</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#equation-of-state-for-a-perfect-gas">Equation of state for a perfect gas</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#compressibility">Compressibility</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#viscosity">Viscosity</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#surface-tension">Surface tension</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#classification-of-flow">Classification of flow</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hydrostatics">Hydrostatics</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#variation-of-pressure-and-position">Variation of pressure and position</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pressure-measurement">Pressure measurement</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#first-and-second-moments-of-area">First and second moments of area</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#thrust">Thrust</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#buoyancy">Buoyancy</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#stability">Stability</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#equilibrium">Equilibrium</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hydrodynamics">Hydrodynamics</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#fluid-particle-acceleration">Fluid particle acceleration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#continuity-equation">Continuity equation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bernoulli-equation">Bernoulli equation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#energy-equation">Energy equation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pressure-variation">Pressure variation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#internal-pipes-and-fittings">Internal pipes and fittings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#boundary-layers">Boundary layers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#free-surface-flow">Free surface flow</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#compressible-flow">Compressible flow</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#unsteady-flow">Unsteady flow</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../computationalFluidDynamics/">Computational Fluid Dynamics</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Engineering Notebook</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Fluid Mechanics</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="fluid-mechanics">Fluid mechanics</h1>
+<h2 id="fundamentals">Fundamentals</h2>
+<h3 id="characteristics">Characteristics</h3>
+<h3 id="fluid-properties">Fluid properties</h3>
+<h3 id="equation-of-state-for-a-perfect-gas">Equation of state for a perfect gas</h3>
+<h3 id="compressibility">Compressibility</h3>
+<h3 id="viscosity">Viscosity</h3>
+<h3 id="surface-tension">Surface tension</h3>
+<h3 id="classification-of-flow">Classification of flow</h3>
+<h2 id="hydrostatics">Hydrostatics</h2>
+<h3 id="variation-of-pressure-and-position">Variation of pressure and position</h3>
+<h3 id="pressure-measurement">Pressure measurement</h3>
+<h3 id="first-and-second-moments-of-area">First and second moments of area</h3>
+<h3 id="thrust">Thrust</h3>
+<h3 id="buoyancy">Buoyancy</h3>
+<h3 id="stability">Stability</h3>
+<h3 id="equilibrium">Equilibrium</h3>
+<h2 id="hydrodynamics">Hydrodynamics</h2>
+<h3 id="fluid-particle-acceleration">Fluid particle acceleration</h3>
+<h3 id="continuity-equation">Continuity equation</h3>
+<h3 id="bernoulli-equation">Bernoulli equation</h3>
+<h3 id="energy-equation">Energy equation</h3>
+<h3 id="pressure-variation">Pressure variation</h3>
+<h2 id="internal-pipes-and-fittings">Internal pipes and fittings</h2>
+<h2 id="boundary-layers">Boundary layers</h2>
+<h2 id="free-surface-flow">Free surface flow</h2>
+<h2 id="compressible-flow">Compressible flow</h2>
+<h2 id="unsteady-flow">Unsteady flow</h2>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../mathematics/" class="btn btn-neutral float-left" title="Mathematics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../computationalFluidDynamics/" class="btn btn-neutral float-right" title="Computational Fluid Dynamics">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../mathematics/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../computationalFluidDynamics/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../javascripts/mathjax.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

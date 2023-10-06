@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Lauren Dransfield" /><link rel="canonical" href="https://LADransfield.github.io/mathematics/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Mathematics - Engineering Notebook</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../styles/sectionnumbers.css" rel="stylesheet" />
+        <link href="../styles/style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Mathematics";
+        var mkdocs_page_input_path = "mathematics.md";
+        var mkdocs_page_url = "/mathematics/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/C.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/C++.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/matlab.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Engineering Notebook
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Mathematics</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#matrices">Matrices</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#introduction-to-matrices">Introduction to matrices</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#definition-of-a-matrix">Definition of a matrix</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#addition-and-multiplication">Addition and multiplication</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#special-matrices">Special matrices</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#transpose-matrices">Transpose matrices</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#inner-and-outer-products">Inner and outer products</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#inverse-matrices">Inverse matrices</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#orthogonal-matrices">Orthogonal matrices</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#permutation-matrices">Permutation matrices</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#systems-of-linear-equations">Systems of Linear Equations</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#gaussian-elimination">Gaussian elimination</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#reduced-row-echelon-form">Reduced row echelon form</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#computing-inverses">Computing inverses</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#elementary-matrices">Elementary matrices</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#lu-decomposition">LU decomposition</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vector-spaces">Vector spaces</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#introduction-to-vector-spaces">Introduction to vector spaces</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#linear-independence">Linear independence</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#span-basis-and-dimension">Span, basis, and dimension</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#gram-schmidt-process">Gram-Schmidt process</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#null-space">Null space</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#column-space">Column space</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#row-space-left-null-space-and-rank">Row space, left null space, and rank</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#orthogonal-projections">Orthogonal projections</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#the-least-squares-problem">The least-squares problem</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#eigenvalues-and-eigenvectors">Eigenvalues and eigenvectors</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#two-by-two-and-three-by-thee-determinants">Two by two and three by thee determinants</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#laplace-expansion">Laplace expansion</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#leibniz-formula">Leibniz formula</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#properties-of-a-determinant">Properties of a determinant</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#the-eigenvalue-problem">The eigenvalue problem</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#finding-eigenvalues-and-eigenvectors">Finding eigenvalues and eigenvectors</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#matrix-diagonalisation">Matrix diagonalisation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#powers-of-a-matrix">Powers of a matrix</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#differential-equations">Differential equations</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#first-order-differential-equations">First-order differential equations</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#euler-method">Euler method</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#seperable-equations">Seperable equations</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#linear-first-order-equations">Linear first order equations</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#homogeneous-linear-differential-equations">Homogeneous linear differential equations</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#euler-method-for-higher-order-odes">Euler method for higher order ODEs</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#the-principle-of-superposition">The principle of superposition</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#the-wronskian">The wronskian</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#homogeneous-second-order-ode-with-constant-coefficients">Homogeneous second order ODE with constant coefficients</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#distinct-real-roots">Distinct real roots</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#complex-conjugate-roots">Complex conjugate roots</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#repeated-roots">Repeated roots</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#inhomogeneous-linear-differential-equations">Inhomogeneous linear differential equations</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#inhomogeneous-second-order-ode">Inhomogeneous second order ODE</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#inhomogeneous-term-exponential-function">Inhomogeneous term: exponential function</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#inhomogeneous-term-sine-or-cosine">Inhomogeneous term: sine or cosine</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#inhomogeneous-term-polynomials">Inhomogeneous term: polynomials</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#resonance">Resonance</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-laplace-transform-and-series-solution-methods">The laplace transform and series solution methods</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#definition-of-the-laplace-transform">Definition of the laplace transform</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#laplace-transform-of-a-constant-coefficient-ode">Laplace transform of a constant coefficient ODE</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#solution-og-an-initial-value-problem">Solution og an initial value problem</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#the-heaviside-step-function">The heaviside step function</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#the-dirac-delta-function">The dirac delta function</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#solution-of-a-discontinuous-inhomogeneous-term">Solution of a discontinuous inhomogeneous term</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#solution-of-an-impulsive-inhomogeneous-term">Solution of an impulsive inhomogeneous term</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#the-series-solution-method">The series solution method</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#series-solution-of-the-airys-equation">Series solution of the Airy's equation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#systems-of-differential-equations">Systems of differential equations</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#systems-of-homogeneous-linear-first-order-odes">Systems of homogeneous linear first order ODEs</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#distinct-real-eigenvalues">Distinct real eigenvalues</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#complex-conjugate-eigenvalues">Complex-conjugate eigenvalues</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#phase-portraits">Phase portraits</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#stable-and-unstable-nodes">Stable and unstable nodes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#saddle-points">Saddle points</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#spirals">Spirals</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#coupled-oscillators">Coupled oscillators</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#normal-modes-eigenvalues">Normal modes (eigenvalues)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#normal-modes-eigenvectors">Normal modes (eigenvectors)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#partial-differential-equations">Partial differential equations</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#fourier-series">Fourier series</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#fourier-sine-and-cosine-series">Fourier sine and cosine series</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#the-diffusion-equation">The diffusion equation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#solution-of-the-diffusion-equation-separation-of-variables">Solution of the diffusion equation: separation of variables</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#solution-of-the-diffusion-equation-eigenvalues">Solution of the diffusion equation: eigenvalues</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#solution-of-the-diffusion-equation-fourier-series">Solution of the diffusion equation: Fourier series</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#vector-calculus">Vector calculus</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#vectors">Vectors</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#introduction-to-vectors">Introduction to vectors</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#cartesian-coordinates">Cartesian coordinates</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#dot-product">Dot product</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#cross-product">Cross product</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#quaternions">Quaternions</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#analytic-geometry-of-lines">Analytic geometry of lines</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#analytic-geometry-of-planes">Analytic geometry of planes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#kronecker-delta-and-levi-civita-symbol">Kronecker delta and Levi-Civita symbol</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#vector-identities">Vector identities</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#scalar-triple-product">Scalar triple product</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#vector-triple-product">Vector triple product</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#scalar-and-vector-fields">Scalar and vector fields</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#differentiation">Differentiation</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#partial-derivatives">Partial derivatives</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#the-method-of-least-squares">The method of least squares</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#chain-rule">Chain rule</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#triple-product-rule">Triple product rule</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#gradient">Gradient</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#divergence">Divergence</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#curl">Curl</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#laplacian">Laplacian</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#vector-derivative-identities">Vector derivative identities</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#integration-and-curvilinear-coordinates">Integration and curvilinear coordinates</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#double-and-triple-integrals">Double and triple integrals</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#polar-coordinates-gradient">Polar coordinates (gradient)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#polar-coordinates-divergence-and-curl">Polar coordinates (divergence and curl)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#polar-coordinates-laplacian">Polar coordinates (laplacian)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#central-force">Central force</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#change-of-variables-single-integral">Change of variables (single integral)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#change-of-variables-double-integral">Change of variables (double integral)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#cylindrical-coordinates">Cylindrical coordinates</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#spherical-coordinates">Spherical coordinates</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#line-and-surface-integrals">Line and surface integrals</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#line-integral-of-a-scalar-field">Line integral of a scalar field</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#arc-length">Arc length</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#line-integral-of-a-vector-field">Line integral of a vector field</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#work-energy-theorem">Work-energy theorem</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#surface-integral-of-a-scalar-field">Surface integral of a scalar field</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#surface-area-of-a-sphere">Surface area of a sphere</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#surface-integral-of-a-vector-field">Surface integral of a vector field</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#flux-integrals">Flux integrals</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fundamental-theorems">Fundamental theorems</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#gradient-theorem">Gradient theorem</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#conservative-vector-fields">Conservative vector fields</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#arithemetic">Arithemetic</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#conservation-of-energy">Conservation of energy</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#divergence-theorem">Divergence theorem</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#continuity-equation">Continuity equation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#greens-theorem">Green's theorem</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#stokes-theorem">Stokes' theorem</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#meaning-of-the-divergence-and-the-curl">Meaning of the divergence and the curl</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#statistics-and-probability">Statistics and probability</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#descriptive-statistics">Descriptive statistics</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#defining-data">Defining data</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#histograms-and-skewness">Histograms and skewness</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mean-median-variance-and-standard-deviation">Mean, median, variance, and standard deviation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#boxplots">Boxplots</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#categorical-data">Categorical data</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#hierarchical-data">Hierarchical data</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#pareto-charts">Pareto charts</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#basic-probability">Basic probability</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#probability">Probability</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#law-of-complements">Law of complements</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mutually-exclusive-and-independent-events">Mutually exclusive and independent events</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#conditional-probability">Conditional probability</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#law-of-total-probability-and-bayes-rule">Law of total probability and Bayes' rule</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#random-variables">Random variables</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#introduction-to-random-variables">Introduction to random variables</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mean-variance-and-standard-deviation-of-a-random-variable">Mean, variance, and standard deviation of a random variable</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mean-variance-and-standard-deviation-for-a-sum-of-random-variables">Mean, variance, and standard deviation for a sum of random variables</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#binomial-random-variable">Binomial random variable</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#poisson-random-variable">Poisson random variable</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#normal-random-variable">Normal random variable</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#central-limit-theorem">Central limit theorem</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#z-scores">Z scores</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sampling-and-confidence-intervals">Sampling and confidence intervals</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#populations-and-samples">Populations and samples</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#point-estimation-of-a-population-mean-and-proportion">Point estimation of a population mean and proportion</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#the-standard-normal">The standard normal</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#confidence-interval-estimation">Confidence interval estimation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#sample-size-determination">Sample size determination</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#the-finite-correction-factor">The finite correction factor</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hypothesis-testing">Hypothesis testing</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#defining-hypotheses">Defining hypotheses</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#type-i-and-type-ii-error">Type I and type II error</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#one-sample-z-test">One sample z-test</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#one-sample-t-test">One sample t-test</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#single-sample-test-for-population-proportion">Single sample test for population proportion</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#testing-equality-of-variances">Testing equality of variances</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#testing-the-difference-between-two-population-means">Testing the difference between two population means</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#chi-squared-test-for-independence">Chi-squared test for independence</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../fluidMechanics/">Fluid Mechanics</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../computationalFluidDynamics/">Computational Fluid Dynamics</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Engineering Notebook</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Mathematics</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="mathematics">Mathematics</h1>
+<h2 id="matrices">Matrices</h2>
+<h3 id="introduction-to-matrices">Introduction to matrices</h3>
+<h4 id="definition-of-a-matrix">Definition of a matrix</h4>
+<p>A matrix is an array of mathematical elements</p>
+<p>If a matrix has 2 rows and 3 columns it is a 2x3 matrix:</p>
+<div class="arithmatex">\[
+  A = \begin{bmatrix}
+    a &amp; b &amp; c\\
+    d &amp; e &amp; f
+  \end{bmatrix}
+\]</div>
+<p>If a matrix has 3 rows and 2 columns it is a 3x2 matrix:</p>
+<div class="arithmatex">\[
+  A = \begin{bmatrix}
+    a &amp; b \\
+    c &amp; d \\
+    e &amp; f
+  \end{bmatrix}
+\]</div>
+<p>These are both rectangular matrices</p>
+<p>A square matrix has the same number of rows as columns:</p>
+<div class="arithmatex">\[
+  A = \begin{bmatrix}
+    a &amp; b \\
+    c &amp; d
+  \end{bmatrix}
+\]</div>
+<p>If either the number of rows or columns is 1, the matrix is a vector</p>
+<p>If the number of rows is 1 it is a row vector:</p>
+<div class="arithmatex">\[
+  A = \begin{bmatrix}
+    a &amp; b &amp; c
+  \end{bmatrix}
+\]</div>
+<p>If the number of columns is 1 it is a column vector:</p>
+<div class="arithmatex">\[
+  A = \begin{bmatrix}
+    a \\
+    b \\
+    c
+  \end{bmatrix}
+\]</div>
+<p>The general notation for an MxN matrix is:</p>
+<div class="arithmatex">\[
+  A = \begin{bmatrix}
+    a_{11} &amp; a_{12} &amp; \dots  &amp; a_{1n} \\
+    a_{21} &amp; a_{22} &amp; \dots  &amp; a_{2n} \\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    a_{m1} &amp; a_{m2} &amp; \dots  &amp; a_{mn}
+  \end{bmatrix}
+\]</div>
+<h4 id="addition-and-multiplication">Addition and multiplication</h4>
+<p>Matrices of the same size can be added element by element:</p>
+<div class="arithmatex">\[
+  \begin{bmatrix}
+    a &amp; b \\
+    c &amp; d
+  \end{bmatrix} + \begin{bmatrix}
+    e &amp; f \\
+    g &amp; h
+  \end{bmatrix} = \begin{bmatrix}
+    a+e &amp; b+f \\
+    c+g &amp; d+h
+  \end{bmatrix}
+\]</div>
+<p>Matrices which are not the same size cannot be added</p>
+<p>Multiplying a matrix by a scalar is also element by element:</p>
+<div class="arithmatex">\[
+  \begin{bmatrix}
+    a &amp; b \\
+    c &amp; d
+  \end{bmatrix} \times e = \begin{bmatrix}
+    ae &amp; be \\
+    ce &amp; de
+  \end{bmatrix}
+\]</div>
+<p>The matrix can be any size when multiplying by a scalar</p>
+<p>Multiplying two matrices requires multiplying across the rows of the first matrix, and down the columns of the second and summing the result:</p>
+<div class="arithmatex">\[
+  \begin{bmatrix}
+    a &amp; b \\
+    c &amp; d
+  \end{bmatrix} \times \begin{bmatrix}
+    e &amp; f \\
+    g &amp; h
+  \end{bmatrix} = \begin{bmatrix}
+    ae+bg &amp; af+bh \\
+    ce+dg &amp; cf+dh
+  \end{bmatrix}
+\]</div>
+<p>The order of the matrices in the multiplication is important (they do not commute):</p>
+<div class="arithmatex">\[
+  \begin{bmatrix}
+    e &amp; f \\
+    g &amp; h
+  \end{bmatrix} \times \begin{bmatrix}
+    a &amp; b \\
+    c &amp; d
+  \end{bmatrix} = \begin{bmatrix}
+    ea+fc &amp; eb+fd \\
+    ga+hc &amp; gb+hd
+  \end{bmatrix}
+\]</div>
+<p>Because the rows of the first matrix are multiplied by the columns of the second, the first matrix must have the same number of rows as the second's number of columns</p>
+<p>The general formula for the multiplication of matrices is:</p>
+<div class="arithmatex">\[
+C = A B
+\]</div>
+<div class="arithmatex">\[
+\ c_{ij} = \sum_{k=1}^{n} 2^{-n} = a_{ik} b_{kj}
+\]</div>
+<h4 id="special-matrices">Special matrices</h4>
+<p>The zero matrix is one where all elements are equal to zero:</p>
+<div class="arithmatex">\[
+  0 = \begin{bmatrix}
+    0 &amp; 0 \\
+    0 &amp; 0
+  \end{bmatrix}
+\]</div>
+<p>The identity matrix is a matrix where diagonal elements are equal to 1, and all other elements are 0:</p>
+<div class="arithmatex">\[
+  I = \begin{bmatrix}
+    1 &amp; 0 \\
+    0 &amp; 1
+  \end{bmatrix}
+\]</div>
+<p>The identity matrix does commute:</p>
+<div class="arithmatex">\[
+AI = IA
+\]</div>
+<p>Diagonal matrices have non-zero elements only on the diagonal:</p>
+<div class="arithmatex">\[
+  D = \begin{bmatrix}
+    d_{11} &amp; 0 \\
+    0 &amp; d_{22}
+  \end{bmatrix}
+\]</div>
+<p>Banded matrices have non-zero elements on the bands parallel to the diagonal</p>
+<p>For example, a tridiagonal banded matrix has three bands:</p>
+<div class="arithmatex">\[
+  B = \begin{bmatrix}
+    b_{11} &amp; b_{12} &amp; 0 \\
+    b_{21} &amp; b_{22} &amp; b_{23} \\
+    0 &amp; b_{32} &amp; b_{33}
+  \end{bmatrix}
+\]</div>
+<p>Triangular matrices have elements either above or below the diagonal</p>
+<p>An upper diagonal matrix:</p>
+<div class="arithmatex">\[
+  U = \begin{bmatrix}
+    u_{11} &amp; u_{12} &amp; u_{13} \\
+    0 &amp; u_{22} &amp; u_{23} \\
+    0 &amp; 0 &amp; u_{33}
+  \end{bmatrix}
+\]</div>
+<p>A lower diagonal matrix:</p>
+<div class="arithmatex">\[
+  L = \begin{bmatrix}
+    l_{11} &amp; 0 &amp; 0 \\
+    l_{21} &amp; l_{22} &amp; 0 \\
+    l_{31} &amp; l_{32} &amp; l_{33}
+  \end{bmatrix}
+\]</div>
+<h4 id="transpose-matrices">Transpose matrices</h4>
+<p>A transpose of a matrix is its mirror along the diagonal</p>
+<p>When transposed, a matrix's rows become its columns and its columns its rows</p>
+<div class="arithmatex">\[
+  A = \begin{bmatrix}
+    a_{11} &amp; a_{12} &amp; \dots  &amp; a_{1n} \\
+    a_{21} &amp; a_{22} &amp; \dots  &amp; a_{2n} \\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    a_{m1} &amp; a_{m2} &amp; \dots  &amp; a_{mn}
+  \end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+  A^{T} = \begin{bmatrix}
+    a_{11} &amp; a_{21} &amp; \dots  &amp; a_{m1} \\
+    a_{12} &amp; a_{22} &amp; \dots  &amp; a_{m2} \\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    a_{n1} &amp; a_{2n} &amp; \dots  &amp; a_{mn}
+  \end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+  A_{ij} = A_{ji}
+\]</div>
+<p>When transposing an MxN matrix, it becomes NxM</p>
+<p>Transposing a transpose returns the original matrix</p>
+<div class="arithmatex">\[
+(A^{T})^{T} = A
+\]</div>
+<p>Adding two matrices and transposing is equal to the sum of the transposes</p>
+<div class="arithmatex">\[
+(A+B)^{T} = A^{T} + B^{T}
+\]</div>
+<p>Multiplying two matrices and transposing is equal to the reverse of the product of the transposes</p>
+<div class="arithmatex">\[
+(AB)^{T} = B^{T} A^{T}
+\]</div>
+<p>If a matrix's transpose is equal to the matrix, it is said to be symmetric</p>
+<div class="arithmatex">\[
+A = A^{T}
+\]</div>
+<p>If a matrix's transpose is equal to the negative of the matrix, it is said to be skew-symmetric</p>
+<div class="arithmatex">\[
+-A = A^{T}
+\]</div>
+<h4 id="inner-and-outer-products">Inner and outer products</h4>
+<p>The inner product is the same as the dot product</p>
+<div class="arithmatex">\[
+  U = \begin{bmatrix}
+    u_{1} \\
+    u_{2} \\
+    u_{3}
+  \end{bmatrix},  V = \begin{bmatrix}
+    v_{1} \\
+    v_{2} \\
+    v_{3}
+  \end{bmatrix}
+\]</div>
+<p>To calculate the inner product, one matrix must be transposed</p>
+<div class="arithmatex">\[
+U^{T} V = \begin{bmatrix}
+    u_{1} &amp; u_{2} &amp; u_{3}
+  \end{bmatrix} \begin{bmatrix}
+    v_{1} \\
+    v_{2} \\
+    v_{3}
+  \end{bmatrix} = u_{1}v_{1} + u_{2}v_{2} + u_{3}v_{3}
+\]</div>
+<p>If the inner product is equal to 0, then U and V are orthogonal</p>
+<p>The norm of a vector is it's length</p>
+<div class="arithmatex">\[
+\|U\| = \sqrt{U^{T} U} = \sqrt{u_{1}^2+u_{2}^2+u_{3}^2}
+\]</div>
+<p>A vector has been normalised when the norm is equal to 1</p>
+<p>If two vectors are both orthogonal and normalised, they are orthonormal</p>
+<p>The outer product is the inverse of the inner product</p>
+<div class="arithmatex">\[
+U V^{T} = \begin{bmatrix}
+    u_{1} \\
+    u_{2} \\
+    u_{3}
+  \end{bmatrix} \begin{bmatrix}
+    v_{1} &amp; v_{2} &amp; v_{3}
+  \end{bmatrix} = \begin{bmatrix}
+    u_{1}v_{1} &amp; u_{1}v_{2} &amp; u_{1}v_{3}\\
+    u_{2}v_{1} &amp; u_{2}v_{2} &amp; u_{2}v_{3}\\
+    u_{3}v_{1} &amp; u_{3}v_{2} &amp; u_{3}v_{3}
+  \end{bmatrix}
+\]</div>
+<h4 id="inverse-matrices">Inverse matrices</h4>
+<p>Not all matrices can be inverted</p>
+<p>A matrix is only invertible when the matrix is square and:</p>
+<div class="arithmatex">\[
+A A^{-1} = I = A^{-1} A
+\]</div>
+<p>Multiplying two matrices and inverting them is equal to the reverse of the product of the inverses</p>
+<div class="arithmatex">\[
+(AB)^{-1} = B^{-1} A^{-1}
+\]</div>
+<p>The inverse of a transpose is equal to the transpose of an inverse:</p>
+<div class="arithmatex">\[
+(A^{T})^{-1} = (A^{-1})^{T}
+\]</div>
+<p>Some equations are derived which can be used to calculate the inverse</p>
+<div class="arithmatex">\[
+A A^{-1} = I
+\]</div>
+<div class="arithmatex">\[
+  \begin{bmatrix}
+    a &amp; b \\
+    c &amp; d
+  \end{bmatrix} \begin{bmatrix}
+    x_{1} &amp; x_{2} \\
+    y_{1} &amp; y_{2}
+  \end{bmatrix} = \begin{bmatrix}
+    1 &amp; 0 \\
+    0 &amp; 1
+  \end{bmatrix}
+\]</div>
+<p>We can make the following set of equations:</p>
+<div class="arithmatex">\[
+a x_{1} + b y_{1} = 1 \\
+a x_{2} + b y_{2} = 0 \\
+c x_{1} + d y_{1} = 0 \\
+c x_{2} + d y_{2} = 1
+\]</div>
+<p>Therefore:</p>
+<div class="arithmatex">\[
+y_{1} = \dfrac{-c}{d} x_{1} \\
+y_{2} = \dfrac{-a}{b} x_{2}
+\]</div>
+<p>Finding x1:</p>
+<div class="arithmatex">\[
+a x_{1} + b y_{1} = 1 \\
+a x_{1} + b \dfrac{-c}{d} x_{1} = 1 \\
+x_{1}\left(\dfrac{ad}{d} - \dfrac{bc}{d}\right)= 1 \\
+x_{1} = \dfrac{d}{ad-bc}
+\]</div>
+<p>Finding y1:</p>
+<div class="arithmatex">\[
+y_{1} = \dfrac{-c}{d} x_{1} \\
+y_{1} = \dfrac{-c}{d} \dfrac{d}{ad-bc} \\
+y_{1} = \dfrac{-c}{ad-bc}
+\]</div>
+<p>Finding x2:</p>
+<div class="arithmatex">\[
+c x_{2} + d y_{2} = 1 \\
+c x_{2} + d \dfrac{-a}{b} x_{2} = 1 \\
+x_{2}\left(\dfrac{cb}{b} - \dfrac{ad}{b}\right)= 1 \\
+x_{2} = \dfrac{b}{cb-ad} \\
+x_{2} = \dfrac{-b}{ad-bc}
+\]</div>
+<p>Finding y2:</p>
+<div class="arithmatex">\[
+y_{2} = \dfrac{-a}{b} x_{2} \\
+y_{2} = \dfrac{-a}{b} \dfrac{-b}{ad-bc} \\
+y_{2} = \dfrac{a}{ad-bc}
+\]</div>
+<p>Therefore:</p>
+<div class="arithmatex">\[
+A^{-1} = \dfrac{1}{ad-bc} \begin{bmatrix}
+    d &amp; -b \\
+    -c &amp; a
+  \end{bmatrix}
+\]</div>
+<p>And so, the determinant of the 2x2 matrix is:</p>
+<div class="arithmatex">\[
+|A| = ad-bc
+\]</div>
+<p>If the determinant is equal to 0, then the matrix is not invertible</p>
+<h4 id="orthogonal-matrices">Orthogonal matrices</h4>
+<p>The inverse of an orthogonal matrix is equal to the transpose of the matrix</p>
+<div class="arithmatex">\[
+Q^{-1} = Q^{T}
+\]</div>
+<p>Therefore:</p>
+<div class="arithmatex">\[
+Q Q^{T} = I \\
+Q^{T} Q = I
+\]</div>
+<p>Both the rows and columns of an orthogonal matrix are orthogonal</p>
+<p>Orthogonal matrices preserve norms; for a matrix Q and column vector x the norm is:</p>
+<div class="arithmatex">\[
+(Q x)^{T} (Q x) = \| Qx \|^{2}
+\]</div>
+<p>We can write the first expression as:</p>
+<div class="arithmatex">\[
+x^{T} Q^{T} Q x
+\]</div>
+<p>As <span class="arithmatex">\(Q^{T} Q = I\)</span>, we can simplify to:</p>
+<div class="arithmatex">\[
+x^{T} x
+\]</div>
+<p>Which becomes:</p>
+<div class="arithmatex">\[
+\| x \|^{2}
+\]</div>
+<p>Therefore, we can prove that the orthogonal matrix Q preserves norms (lengths) because:</p>
+<div class="arithmatex">\[
+\| x \|^{2} = \| Qx \|^{2}
+\]</div>
+<h4 id="permutation-matrices">Permutation matrices</h4>
+<p>Permutation matrices are a type of orthogonal matrix</p>
+<p>When an NxN permutation matrix is multiplied by another matrix, the rows of the matrix are permuted (rearranged)</p>
+<p>For a 2x2 matrix, there are 2 possible permutations</p>
+<p>The first permutation is that there is no change, this happens when the permutation matrix is the identity matrix:</p>
+<div class="arithmatex">\[
+  \begin{bmatrix}
+    1 &amp; 0 \\
+    0 &amp; 1
+  \end{bmatrix} \begin{bmatrix}
+    a &amp; b \\
+    c &amp; d
+  \end{bmatrix} = \begin{bmatrix}
+    a &amp; b \\
+    c &amp; d
+  \end{bmatrix}
+\]</div>
+<p>For the second permutation:</p>
+<div class="arithmatex">\[
+  \begin{bmatrix}
+    0 &amp; 1 \\
+    1 &amp; 0
+  \end{bmatrix} \begin{bmatrix}
+    a &amp; b \\
+    c &amp; d
+  \end{bmatrix} = \begin{bmatrix}
+    c &amp; d \\
+    a &amp; b
+  \end{bmatrix}
+\]</div>
+<p>For a 3x3 matrix, the number of possible permutations is <span class="arithmatex">\(3! = 6\)</span></p>
+<p>Permutation matrices may be obtained by permuting the rows of the identity matrix:</p>
+<div class="arithmatex">\[
+P A = (P I) A
+\]</div>
+<h3 id="systems-of-linear-equations">Systems of Linear Equations</h3>
+<h4 id="gaussian-elimination">Gaussian elimination</h4>
+<p>Gaussian elimination is used to solve systems of linear equations</p>
+<p>Gaussian elimination relies on performing operations on a matrix made up of a system of linear equations which modify the matrix without changing the solution</p>
+<p>This includes:</p>
+<ul>
+<li>Permuting the rows</li>
+<li>Multiplying rows by a constant</li>
+<li>Summing rows which have been multiplied by a constant</li>
+</ul>
+<p>These operations are performed on the matrix until an upper triangular matrix is formed</p>
+<p>An example is used below to demonstrate the process</p>
+<div class="arithmatex">\[
+-3x_1+2x_2-x_3=-1\\
+6x_1-6x_2+7x_3=-7\\
+3x_1-4x_2+4x_3=-6
+\]</div>
+<p>First, the system of equations are written as a matrix multiplication</p>
+<div class="arithmatex">\[
+ \begin{bmatrix}
+    -3 &amp; 2 &amp; -1 \\
+    6 &amp; -6 &amp; 7 \\
+    3 &amp; -4 &amp; 4
+  \end{bmatrix} \begin{bmatrix}
+    x_1 \\
+    x_2 \\
+    x_3
+  \end{bmatrix} = \begin{bmatrix}
+    -1 \\
+    -7 \\
+    -6
+  \end{bmatrix}
+\]</div>
+<p>From this, the augmented matrix can be formed</p>
+<div class="arithmatex">\[
+ \begin{bmatrix}
+    -3 &amp; 2 &amp; -1 &amp; -1\\
+    6 &amp; -6 &amp; 7 &amp; -7\\
+    3 &amp; -4 &amp; 4 &amp; -6
+  \end{bmatrix}
+\]</div>
+<p>A pivot (red) is selected, and the rows below the pivot undergo operations to make any values directly below the pivot equal to zero</p>
+<div class="arithmatex">\[
+ \begin{bmatrix}
+    \color{red}-3 &amp; 2 &amp; -1 &amp; -1\\
+    6 &amp; -6 &amp; 7 &amp; -7\\
+    3 &amp; -4 &amp; 4 &amp; -6
+  \end{bmatrix}
+ \begin{matrix}
+     \\
+    + 2 \times Row 1\\
+    + 1 \times Row 1
+  \end{matrix} \Rightarrow  \begin{bmatrix}
+    -3 &amp; 2 &amp; -1 &amp; -1\\
+    0 &amp; -2 &amp; 5 &amp; -9\\
+    0 &amp; -2 &amp; 3 &amp; -7
+  \end{bmatrix}
+\]</div>
+<p>A new pivot is then selected, and the same procedure is repeated</p>
+<div class="arithmatex">\[
+\begin{bmatrix}
+    -3 &amp; 2 &amp; -1 &amp; -1\\
+    0 &amp; \color{red}-2 &amp; 5 &amp; -9\\
+    0 &amp; -2 &amp; 3 &amp; -7
+  \end{bmatrix}
+ \begin{matrix}
+   \\
+   \\
+    + -1 \times Row 2
+  \end{matrix} \Rightarrow  \begin{bmatrix}
+    -3 &amp; 2 &amp; -1 &amp; -1\\
+    0 &amp; -2 &amp; 5 &amp; -9\\
+    0 &amp; 0 &amp; -2 &amp; 2
+  \end{bmatrix}
+\]</div>
+<p>This matrix can now be converted back into a system of equations to be solved by back substitution</p>
+<div class="arithmatex">\[
+-3x_1+2x_2-x_3=-1\\
+-2x_2+5x_3=-9\\
+-2x_3=2
+\]</div>
+<div class="arithmatex">\[
+x_3 = -1
+\]</div>
+<div class="arithmatex">\[
+-2 x_2 - 5=-9\\
+-2x_2=-4\\
+x_2=2
+\]</div>
+<div class="arithmatex">\[
+-3x_1+4+1=-1\\
+-2x_1=-6\\
+x_1=2
+\]</div>
+<h4 id="reduced-row-echelon-form">Reduced row echelon form</h4>
+<p>The reduced row echelon form is an expansion on Gaussian elimination</p>
+<p>In this form, the diagonal elements of the matrix should all become one, and the values above and below them equal to zero</p>
+<div class="arithmatex">\[
+ A = \begin{bmatrix}
+    1 &amp; 2 &amp; 3 &amp; 4\\
+    4 &amp; 5 &amp; 6 &amp; 7\\
+    6 &amp; 7 &amp; 8 &amp; 9
+  \end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+ \begin{bmatrix}
+    \color{red}1 &amp; 2 &amp; 3 &amp; 4\\
+    4 &amp; 5 &amp; 6 &amp; 7\\
+    6 &amp; 7 &amp; 8 &amp; 9
+  \end{bmatrix}
+ \begin{matrix}
+     \\
+    + -4 \times Row 1\\
+    + -6 \times Row 1
+  \end{matrix} \Rightarrow  \begin{bmatrix}
+    1 &amp; 2 &amp; 3 &amp; 4\\
+    0 &amp; -3 &amp; -6 &amp; -9\\
+    0 &amp; -5 &amp; -10 &amp; -15
+  \end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+ \begin{bmatrix}
+    1 &amp; 2 &amp; 3 &amp; 4\\
+    0 &amp; -3 &amp; -6 &amp; -9\\
+    0 &amp; -5 &amp; -10 &amp; -15
+  \end{bmatrix}
+ \begin{matrix}
+     \\
+    \div -3\\
+    \div -5
+  \end{matrix} \Rightarrow  \begin{bmatrix}
+    1 &amp; 2 &amp; 3 &amp; 4\\
+    0 &amp; 1 &amp; 2 &amp; 3\\
+    0 &amp; 1 &amp; 2 &amp; 3
+  \end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+ \begin{bmatrix}
+    1 &amp; 2 &amp; 3 &amp; 4\\
+    0 &amp; \color{red}1 &amp; 2 &amp; 3\\
+    0 &amp; 1 &amp; 2 &amp; 3
+  \end{bmatrix}
+ \begin{matrix}
+    + -2 \times Row 2 \\
+    \\
+    + -1 \times Row 2
+  \end{matrix} \Rightarrow  \begin{bmatrix}
+    1 &amp; 0 &amp; -1 &amp; -2\\
+    0 &amp; 1 &amp; 2 &amp; 3\\
+    0 &amp; 0 &amp; 0 &amp; 0
+  \end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+RREF(A) = \begin{bmatrix}
+    1 &amp; 0 &amp; -1 &amp; -2\\
+    0 &amp; 1 &amp; 2 &amp; 3\\
+    0 &amp; 0 &amp; 0 &amp; 0
+  \end{bmatrix}
+\]</div>
+<h4 id="computing-inverses">Computing inverses</h4>
+<h4 id="elementary-matrices">Elementary matrices</h4>
+<h4 id="lu-decomposition">LU decomposition</h4>
+<h3 id="vector-spaces">Vector spaces</h3>
+<h4 id="introduction-to-vector-spaces">Introduction to vector spaces</h4>
+<h4 id="linear-independence">Linear independence</h4>
+<h4 id="span-basis-and-dimension">Span, basis, and dimension</h4>
+<h4 id="gram-schmidt-process">Gram-Schmidt process</h4>
+<h4 id="null-space">Null space</h4>
+<h4 id="column-space">Column space</h4>
+<h4 id="row-space-left-null-space-and-rank">Row space, left null space, and rank</h4>
+<h4 id="orthogonal-projections">Orthogonal projections</h4>
+<h4 id="the-least-squares-problem">The least-squares problem</h4>
+<h3 id="eigenvalues-and-eigenvectors">Eigenvalues and eigenvectors</h3>
+<h4 id="two-by-two-and-three-by-thee-determinants">Two by two and three by thee determinants</h4>
+<h4 id="laplace-expansion">Laplace expansion</h4>
+<h4 id="leibniz-formula">Leibniz formula</h4>
+<h4 id="properties-of-a-determinant">Properties of a determinant</h4>
+<h4 id="the-eigenvalue-problem">The eigenvalue problem</h4>
+<h4 id="finding-eigenvalues-and-eigenvectors">Finding eigenvalues and eigenvectors</h4>
+<h4 id="matrix-diagonalisation">Matrix diagonalisation</h4>
+<h4 id="powers-of-a-matrix">Powers of a matrix</h4>
+<hr />
+<h2 id="differential-equations">Differential equations</h2>
+<h3 id="first-order-differential-equations">First-order differential equations</h3>
+<h4 id="euler-method">Euler method</h4>
+<h4 id="seperable-equations">Seperable equations</h4>
+<h4 id="linear-first-order-equations">Linear first order equations</h4>
+<h3 id="homogeneous-linear-differential-equations">Homogeneous linear differential equations</h3>
+<h4 id="euler-method-for-higher-order-odes">Euler method for higher order ODEs</h4>
+<h4 id="the-principle-of-superposition">The principle of superposition</h4>
+<h4 id="the-wronskian">The wronskian</h4>
+<h4 id="homogeneous-second-order-ode-with-constant-coefficients">Homogeneous second order ODE with constant coefficients</h4>
+<h4 id="distinct-real-roots">Distinct real roots</h4>
+<h4 id="complex-conjugate-roots">Complex conjugate roots</h4>
+<h4 id="repeated-roots">Repeated roots</h4>
+<h3 id="inhomogeneous-linear-differential-equations">Inhomogeneous linear differential equations</h3>
+<h4 id="inhomogeneous-second-order-ode">Inhomogeneous second order ODE</h4>
+<h4 id="inhomogeneous-term-exponential-function">Inhomogeneous term: exponential function</h4>
+<h4 id="inhomogeneous-term-sine-or-cosine">Inhomogeneous term: sine or cosine</h4>
+<h4 id="inhomogeneous-term-polynomials">Inhomogeneous term: polynomials</h4>
+<h4 id="resonance">Resonance</h4>
+<h3 id="the-laplace-transform-and-series-solution-methods">The laplace transform and series solution methods</h3>
+<h4 id="definition-of-the-laplace-transform">Definition of the laplace transform</h4>
+<h4 id="laplace-transform-of-a-constant-coefficient-ode">Laplace transform of a constant coefficient ODE</h4>
+<h4 id="solution-og-an-initial-value-problem">Solution og an initial value problem</h4>
+<h4 id="the-heaviside-step-function">The heaviside step function</h4>
+<h4 id="the-dirac-delta-function">The dirac delta function</h4>
+<h4 id="solution-of-a-discontinuous-inhomogeneous-term">Solution of a discontinuous inhomogeneous term</h4>
+<h4 id="solution-of-an-impulsive-inhomogeneous-term">Solution of an impulsive inhomogeneous term</h4>
+<h4 id="the-series-solution-method">The series solution method</h4>
+<h4 id="series-solution-of-the-airys-equation">Series solution of the Airy's equation</h4>
+<h3 id="systems-of-differential-equations">Systems of differential equations</h3>
+<h4 id="systems-of-homogeneous-linear-first-order-odes">Systems of homogeneous linear first order ODEs</h4>
+<h4 id="distinct-real-eigenvalues">Distinct real eigenvalues</h4>
+<h4 id="complex-conjugate-eigenvalues">Complex-conjugate eigenvalues</h4>
+<h4 id="phase-portraits">Phase portraits</h4>
+<h4 id="stable-and-unstable-nodes">Stable and unstable nodes</h4>
+<h4 id="saddle-points">Saddle points</h4>
+<h4 id="spirals">Spirals</h4>
+<h4 id="coupled-oscillators">Coupled oscillators</h4>
+<h4 id="normal-modes-eigenvalues">Normal modes (eigenvalues)</h4>
+<h4 id="normal-modes-eigenvectors">Normal modes (eigenvectors)</h4>
+<h3 id="partial-differential-equations">Partial differential equations</h3>
+<h4 id="fourier-series">Fourier series</h4>
+<h4 id="fourier-sine-and-cosine-series">Fourier sine and cosine series</h4>
+<h4 id="the-diffusion-equation">The diffusion equation</h4>
+<h4 id="solution-of-the-diffusion-equation-separation-of-variables">Solution of the diffusion equation: separation of variables</h4>
+<h4 id="solution-of-the-diffusion-equation-eigenvalues">Solution of the diffusion equation: eigenvalues</h4>
+<h4 id="solution-of-the-diffusion-equation-fourier-series">Solution of the diffusion equation: Fourier series</h4>
+<hr />
+<h2 id="vector-calculus">Vector calculus</h2>
+<h3 id="vectors">Vectors</h3>
+<h4 id="introduction-to-vectors">Introduction to vectors</h4>
+<h4 id="cartesian-coordinates">Cartesian coordinates</h4>
+<h4 id="dot-product">Dot product</h4>
+<h4 id="cross-product">Cross product</h4>
+<h4 id="quaternions">Quaternions</h4>
+<h4 id="analytic-geometry-of-lines">Analytic geometry of lines</h4>
+<h4 id="analytic-geometry-of-planes">Analytic geometry of planes</h4>
+<h4 id="kronecker-delta-and-levi-civita-symbol">Kronecker delta and Levi-Civita symbol</h4>
+<h4 id="vector-identities">Vector identities</h4>
+<h4 id="scalar-triple-product">Scalar triple product</h4>
+<h4 id="vector-triple-product">Vector triple product</h4>
+<h4 id="scalar-and-vector-fields">Scalar and vector fields</h4>
+<h3 id="differentiation">Differentiation</h3>
+<h4 id="partial-derivatives">Partial derivatives</h4>
+<h4 id="the-method-of-least-squares">The method of least squares</h4>
+<h4 id="chain-rule">Chain rule</h4>
+<h4 id="triple-product-rule">Triple product rule</h4>
+<h4 id="gradient">Gradient</h4>
+<h4 id="divergence">Divergence</h4>
+<h4 id="curl">Curl</h4>
+<h4 id="laplacian">Laplacian</h4>
+<h4 id="vector-derivative-identities">Vector derivative identities</h4>
+<h3 id="integration-and-curvilinear-coordinates">Integration and curvilinear coordinates</h3>
+<h4 id="double-and-triple-integrals">Double and triple integrals</h4>
+<h4 id="polar-coordinates-gradient">Polar coordinates (gradient)</h4>
+<h4 id="polar-coordinates-divergence-and-curl">Polar coordinates (divergence and curl)</h4>
+<h4 id="polar-coordinates-laplacian">Polar coordinates (laplacian)</h4>
+<h4 id="central-force">Central force</h4>
+<h4 id="change-of-variables-single-integral">Change of variables (single integral)</h4>
+<h4 id="change-of-variables-double-integral">Change of variables (double integral)</h4>
+<h4 id="cylindrical-coordinates">Cylindrical coordinates</h4>
+<h4 id="spherical-coordinates">Spherical coordinates</h4>
+<h3 id="line-and-surface-integrals">Line and surface integrals</h3>
+<h4 id="line-integral-of-a-scalar-field">Line integral of a scalar field</h4>
+<h4 id="arc-length">Arc length</h4>
+<h4 id="line-integral-of-a-vector-field">Line integral of a vector field</h4>
+<h4 id="work-energy-theorem">Work-energy theorem</h4>
+<h4 id="surface-integral-of-a-scalar-field">Surface integral of a scalar field</h4>
+<h4 id="surface-area-of-a-sphere">Surface area of a sphere</h4>
+<h4 id="surface-integral-of-a-vector-field">Surface integral of a vector field</h4>
+<h4 id="flux-integrals">Flux integrals</h4>
+<h3 id="fundamental-theorems">Fundamental theorems</h3>
+<h4 id="gradient-theorem">Gradient theorem</h4>
+<h4 id="conservative-vector-fields">Conservative vector fields</h4>
+<h3 id="arithemetic">Arithemetic</h3>
+<h4 id="conservation-of-energy">Conservation of energy</h4>
+<h4 id="divergence-theorem">Divergence theorem</h4>
+<h4 id="continuity-equation">Continuity equation</h4>
+<h4 id="greens-theorem">Green's theorem</h4>
+<h4 id="stokes-theorem">Stokes' theorem</h4>
+<h4 id="meaning-of-the-divergence-and-the-curl">Meaning of the divergence and the curl</h4>
+<hr />
+<h2 id="statistics-and-probability">Statistics and probability</h2>
+<h3 id="descriptive-statistics">Descriptive statistics</h3>
+<h4 id="defining-data">Defining data</h4>
+<h4 id="histograms-and-skewness">Histograms and skewness</h4>
+<h4 id="mean-median-variance-and-standard-deviation">Mean, median, variance, and standard deviation</h4>
+<h4 id="boxplots">Boxplots</h4>
+<h4 id="categorical-data">Categorical data</h4>
+<h4 id="hierarchical-data">Hierarchical data</h4>
+<h4 id="pareto-charts">Pareto charts</h4>
+<h3 id="basic-probability">Basic probability</h3>
+<h4 id="probability">Probability</h4>
+<h4 id="law-of-complements">Law of complements</h4>
+<h4 id="mutually-exclusive-and-independent-events">Mutually exclusive and independent events</h4>
+<h4 id="conditional-probability">Conditional probability</h4>
+<h4 id="law-of-total-probability-and-bayes-rule">Law of total probability and Bayes' rule</h4>
+<h3 id="random-variables">Random variables</h3>
+<h4 id="introduction-to-random-variables">Introduction to random variables</h4>
+<h4 id="mean-variance-and-standard-deviation-of-a-random-variable">Mean, variance, and standard deviation of a random variable</h4>
+<h4 id="mean-variance-and-standard-deviation-for-a-sum-of-random-variables">Mean, variance, and standard deviation for a sum of random variables</h4>
+<h4 id="binomial-random-variable">Binomial random variable</h4>
+<h4 id="poisson-random-variable">Poisson random variable</h4>
+<h4 id="normal-random-variable">Normal random variable</h4>
+<h4 id="central-limit-theorem">Central limit theorem</h4>
+<h4 id="z-scores">Z scores</h4>
+<h3 id="sampling-and-confidence-intervals">Sampling and confidence intervals</h3>
+<h4 id="populations-and-samples">Populations and samples</h4>
+<h4 id="point-estimation-of-a-population-mean-and-proportion">Point estimation of a population mean and proportion</h4>
+<h4 id="the-standard-normal">The standard normal</h4>
+<h4 id="confidence-interval-estimation">Confidence interval estimation</h4>
+<h4 id="sample-size-determination">Sample size determination</h4>
+<h4 id="the-finite-correction-factor">The finite correction factor</h4>
+<h3 id="hypothesis-testing">Hypothesis testing</h3>
+<h4 id="defining-hypotheses">Defining hypotheses</h4>
+<h4 id="type-i-and-type-ii-error">Type I and type II error</h4>
+<h4 id="one-sample-z-test">One sample z-test</h4>
+<h4 id="one-sample-t-test">One sample t-test</h4>
+<h4 id="single-sample-test-for-population-proportion">Single sample test for population proportion</h4>
+<h4 id="testing-equality-of-variances">Testing equality of variances</h4>
+<h4 id="testing-the-difference-between-two-population-means">Testing the difference between two population means</h4>
+<h4 id="chi-squared-test-for-independence">Chi-squared test for independence</h4>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../fluidMechanics/" class="btn btn-neutral float-right" title="Fluid Mechanics">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../fluidMechanics/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../javascripts/mathjax.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

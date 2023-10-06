@@ -1,8 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://LADransfield.github.io/notes/</loc>
-         <lastmod>2023-10-02</lastmod>
+         <loc>https://LADransfield.github.io/</loc>
+         <lastmod>2023-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://LADransfield.github.io/computationalFluidDynamics/</loc>
+         <lastmod>2023-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://LADransfield.github.io/electronics/</loc>
+         <lastmod>2023-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://LADransfield.github.io/finiteElementAnalysis/</loc>
+         <lastmod>2023-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://LADransfield.github.io/fluidMechanics/</loc>
+         <lastmod>2023-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://LADransfield.github.io/manufacturing/</loc>
+         <lastmod>2023-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://LADransfield.github.io/materials/</loc>
+         <lastmod>2023-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://LADransfield.github.io/mathematics/</loc>
+         <lastmod>2023-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://LADransfield.github.io/solidMechanics/</loc>
+         <lastmod>2023-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://LADransfield.github.io/thermodynamics/</loc>
+         <lastmod>2023-10-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
