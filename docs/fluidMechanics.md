@@ -56,7 +56,7 @@ They are made up of structured and rigidly attached molecules
 
 ### Fluid continuum
 
-Fluid is treated as a continuum for calculation purposes, instead of modelling individual behaviour of molecules, and average conditions assumed
+Fluid is treated as a continuum for calculation purposes, instead of modelling individual behavior of molecules, and average conditions assumed
 
 This is accurate, except when the number of molecules is low and the spacing between them is great (i.e. gasses at very low pressures)
 
@@ -127,7 +127,7 @@ $$
 
 #### Temperature
 
-Temperature, $T$, relates to the average kinetic energy of atoms and molecules in a system, measured in $\degree C=273.15K$
+Temperature, $T$, relates to the average kinetic energy of atoms and molecules in a system, measured in ${}^\circ C=273.15K$
 
 At absolute 0, there is no molecular motion and so this is the lowest possible temperature
 
@@ -189,7 +189,7 @@ $$
 B = -V\dfrac{dp}{dV}
 $$
 
-##### Compressiblity
+##### Compressibility
 
 Compressibility, $K$, is the inverse of bulk modulus, measured in $\frac{1}{Pa}$
 
