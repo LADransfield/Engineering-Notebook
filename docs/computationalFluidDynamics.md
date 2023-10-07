@@ -30,6 +30,8 @@
 
 #### Animations
 
+---
+
 ## Governing equations
 
 ### The continuity equation
@@ -40,11 +42,15 @@
 
 ### Turbulence equations
 
+---
+
 ## Techniques
 
 ### Finite difference method
 
 ### Finite volume method
+
+---
 
 ## Meshing
 
@@ -55,6 +61,8 @@
 ### Moving meshes
 
 ### Adaptive meshing
+
+---
 
 ## Analysis
 

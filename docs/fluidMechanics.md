@@ -264,6 +264,8 @@ There are two typical frames of reference for fluid mechanics:
 
 Eularian is generally most suited to fluid mechanics calculations
 
+---
+
 ## Hydrostatics
 
 ### Variation of pressure and position
@@ -280,6 +282,8 @@ Eularian is generally most suited to fluid mechanics calculations
 
 ### Equilibrium
 
+---
+
 ## Hydrodynamics
 
 ### Fluid particle acceleration
@@ -292,12 +296,22 @@ Eularian is generally most suited to fluid mechanics calculations
 
 ### Pressure variation
 
+---
+
 ## Internal pipes and fittings
+
+---
 
 ## Boundary layers
 
+---
+
 ## Free surface flow
 
+---
+
 ## Compressible flow
+
+---
 
 ## Unsteady flow
