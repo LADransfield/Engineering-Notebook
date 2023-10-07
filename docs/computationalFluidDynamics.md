@@ -40,8 +40,6 @@
 
 ### The energy equation
 
-### Turbulence equations
-
 ---
 
 ## Techniques
@@ -75,3 +73,13 @@
 ### Accuracy
 
 ### Efficiency
+
+---
+
+## Advanced topics
+
+### Turbulence
+
+### Heat transfer
+
+### Multi-phase flow
