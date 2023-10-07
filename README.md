@@ -10,3 +10,10 @@ cd ..
 ```bash
 mkdocs serve
 ```
+# Git
+
+```bash
+git add --all
+git commit -m "Commit message"
+git push origin
+```
