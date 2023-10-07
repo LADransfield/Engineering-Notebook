@@ -373,52 +373,64 @@ $$
 We can make the following set of equations:
 
 $$
-a x_{1} + b y_{1} = 1 \\
-a x_{2} + b y_{2} = 0 \\
-c x_{1} + d y_{1} = 0 \\
-c x_{2} + d y_{2} = 1
+\begin{align*}
+a x_{1} + b y_{1} &= 1 \\
+a x_{2} + b y_{2} &= 0 \\
+c x_{1} + d y_{1} &= 0 \\
+c x_{2} + d y_{2} &= 1
+\end{align*}
 $$
 
 Therefore:
 
 $$
-y_{1} = \dfrac{-c}{d} x_{1} \\
-y_{2} = \dfrac{-a}{b} x_{2}
+\begin{align*}
+y_{1} &= \dfrac{-c}{d} x_{1} \\
+y_{2} &= \dfrac{-a}{b} x_{2}
+\end{align*}
 $$
 
 Finding x1:
 
 $$
-a x_{1} + b y_{1} = 1 \\
-a x_{1} + b \dfrac{-c}{d} x_{1} = 1 \\
-x_{1}\left(\dfrac{ad}{d} - \dfrac{bc}{d}\right)= 1 \\
-x_{1} = \dfrac{d}{ad-bc}
+\begin{align*}
+a x_{1} + b y_{1} &= 1 \\
+a x_{1} + b \dfrac{-c}{d} x_{1} &= 1 \\
+x_{1}\left(\dfrac{ad}{d} - \dfrac{bc}{d}\right)&= 1 \\
+x_{1} &= \dfrac{d}{ad-bc}
+\end{align*}
 $$
 
 Finding y1:
 
 $$
-y_{1} = \dfrac{-c}{d} x_{1} \\
-y_{1} = \dfrac{-c}{d} \dfrac{d}{ad-bc} \\
-y_{1} = \dfrac{-c}{ad-bc}
+\begin{align*}
+y_{1} &= \dfrac{-c}{d} x_{1} \\
+y_{1} &= \dfrac{-c}{d} \dfrac{d}{ad-bc} \\
+y_{1} &= \dfrac{-c}{ad-bc}
+\end{align*}
 $$
 
 Finding x2:
 
 $$
-c x_{2} + d y_{2} = 1 \\
-c x_{2} + d \dfrac{-a}{b} x_{2} = 1 \\
-x_{2}\left(\dfrac{cb}{b} - \dfrac{ad}{b}\right)= 1 \\
-x_{2} = \dfrac{b}{cb-ad} \\
-x_{2} = \dfrac{-b}{ad-bc}
+\begin{align*}
+c x_{2} + d y_{2} &= 1 \\
+c x_{2} + d \dfrac{-a}{b} x_{2} &= 1 \\
+x_{2}\left(\dfrac{cb}{b} - \dfrac{ad}{b}\right) &= 1 \\
+x_{2} &= \dfrac{b}{cb-ad} \\
+x_{2} &= \dfrac{-b}{ad-bc}
+\end{align*}
 $$
 
 Finding y2:
 
 $$
-y_{2} = \dfrac{-a}{b} x_{2} \\
-y_{2} = \dfrac{-a}{b} \dfrac{-b}{ad-bc} \\
-y_{2} = \dfrac{a}{ad-bc}
+\begin{align*}
+y_{2} &= \dfrac{-a}{b} x_{2} \\
+y_{2} &= \dfrac{-a}{b} \dfrac{-b}{ad-bc} \\
+y_{2} &= \dfrac{a}{ad-bc}
+\end{align*}
 $$
 
 Therefore:
@@ -449,8 +461,10 @@ $$
 Therefore:
 
 $$
-Q Q^{T} = I \\
-Q^{T} Q = I
+\begin{align*}
+Q Q^{T} &= I \\
+Q^{T} Q &= I
+\end{align*}
 $$
 
 Both the rows and columns of an orthogonal matrix are orthogonal
@@ -550,9 +564,11 @@ These operations are performed on the matrix until an upper triangular matrix is
 An example is used below to demonstrate the process
 
 $$
--3x_1+2x_2-x_3=-1\\
-6x_1-6x_2+7x_3=-7\\
-3x_1-4x_2+4x_3=-6
+\begin{align*}
+-3x_1+2x_2-x_3&=-1\\
+6x_1-6x_2+7x_3&=-7\\
+3x_1-4x_2+4x_3&=-6
+\end{align*}
 $$
 
 First, the system of equations are written as a matrix multiplication
@@ -587,7 +603,7 @@ A pivot (red) is selected, and the rows below the pivot undergo operations to ma
 
 $$
  \begin{bmatrix}
-    \color{red}-3 & 2 & -1 & -1\\
+    \color{red}{-3} & 2 & -1 & -1\\
     6 & -6 & 7 & -7\\
     3 & -4 & 4 & -6
   \end{bmatrix}
@@ -607,7 +623,7 @@ A new pivot is then selected, and the same procedure is repeated
 $$
 \begin{bmatrix}
     -3 & 2 & -1 & -1\\
-    0 & \color{red}-2 & 5 & -9\\
+    0 & \color{red}{-2} & 5 & -9\\
     0 & -2 & 3 & -7
   \end{bmatrix}
  \begin{matrix}
@@ -624,25 +640,28 @@ $$
 This matrix can now be converted back into a system of equations to be solved by back substitution
 
 $$
--3x_1+2x_2-x_3=-1\\
--2x_2+5x_3=-9\\
--2x_3=2
+\begin{align*}
+-3x_1+2x_2-x_3&=-1\\
+-2x_2+5x_3&=-9\\
+-2x_3&=2\\
+x_3 &= -1
+\end{align*}
 $$
 
 $$
-x_3 = -1
+\begin{align*}
+-2 x_2 - 5&=-9\\
+-2x_2&=-4\\
+x_2&=2
+\end{align*}
 $$
 
 $$
--2 x_2 - 5=-9\\
--2x_2=-4\\
-x_2=2
-$$
-
-$$
--3x_1+4+1=-1\\
--2x_1=-6\\
-x_1=2
+\begin{align*}
+-3x_1+4+1&=-1\\
+-2x_1&=-6\\
+x_1&=2
+\end{align*}
 $$
 
 #### Reduced row echelon form
@@ -661,7 +680,7 @@ $$
 
 $$
  \begin{bmatrix}
-    \color{red}1 & 2 & 3 & 4\\
+    \color{red}{1} & 2 & 3 & 4\\
     4 & 5 & 6 & 7\\
     6 & 7 & 8 & 9
   \end{bmatrix}
@@ -696,7 +715,7 @@ $$
 $$
  \begin{bmatrix}
     1 & 2 & 3 & 4\\
-    0 & \color{red}1 & 2 & 3\\
+    0 & \color{red}{1} & 2 & 3\\
     0 & 1 & 2 & 3
   \end{bmatrix}
  \begin{matrix}
@@ -720,9 +739,304 @@ $$
 
 #### Computing inverses
 
-#### Elementary matrices
+The reduced row echelon form can be used to find inverses of matrices
 
-#### LU decomposition
+$$
+A = \begin{bmatrix}
+-3 & 2 & -1 \\
+6 & -6 & 7 \\
+3 & -4 & 4
+\end{bmatrix}
+$$
+
+For a matrix to be invertible:
+
+$$
+\begin{align*}
+A A^{-1} &= I \\
+A a_{i}^{-1} &= e_i
+\end{align*}
+$$
+
+We combine the identity matrix and the original matrix for the augmented matrix:
+
+$$
+\begin{bmatrix}
+-3 & 2 & -1 & 1 & 0 & 0\\
+6 & -6 & 7 & 0 & 1 & 0\\
+3 & -4 & 4 & 0 & 0 & 1
+\end{bmatrix}
+$$
+
+And calculate the reduced row echelon form:
+
+$$
+\begin{bmatrix}
+\color{red}{-3} & 2 & -1 & 1 & 0 & 0\\
+6 & -6 & 7 & 0 & 1 & 0\\
+3 & -4 & 4 & 0 & 0 & 1
+\end{bmatrix}
+\begin{matrix}
+{}\\
+{}+ 2 \times Row 1\\
+{}+ 1 \times Row 1
+\end{matrix} \Rightarrow  \begin{bmatrix}
+-3 & 2 & -1 & 0 & 0 & 0\\
+0 & -2 & 5 & 2& 1 & 0\\
+0 & -2 & 3 & 1 & 0 & 1
+\end{bmatrix}
+$$
+
+$$
+\begin{bmatrix}
+-3 & 2 & -1 & 0 & 0 & 0\\
+0 & \color{red}{-2} & 5 & 2& 1 & 0\\
+0 & -2 & 3 & 1 & 0 & 1
+\end{bmatrix}
+\begin{matrix}
+{}+ 1 \times Row 2\\
+{}\\
+{}+ -1 \times Row 2
+\end{matrix} \Rightarrow  \begin{bmatrix}
+-3 & 0 & 4 & 3 & 1 & 0\\
+0 & -2 & 5 & 2& 1 & 0\\
+0 & 0 & -2 & -1 & -1 & 1
+\end{bmatrix}
+$$
+
+$$
+\begin{bmatrix}
+-3 & 0 & 4 & 3 & 1 & 0\\
+0 & -2 & 5 & 2& 1 & 0\\
+0 & 0 & \color{red}{-2} & -1 & -1 & 1
+\end{bmatrix}
+\begin{matrix}
+{}+ 2 \times Row 3\\
+{}+ 2.5 \times Row 3\\
+{}
+\end{matrix} \Rightarrow  \begin{bmatrix}
+-3 & 0 & 0 & 1 & -1 & 2\\
+0 & -2 & 0 & -\frac{1}{2} & -\frac{3}{2} & \frac{5}{2}\\
+0 & 0 & -2 & -1 & -1 & 1
+\end{bmatrix}
+$$
+
+$$
+\begin{bmatrix}
+-3 & 0 & 0 & 1 & -1 & 2\\
+0 & -2 & 0 & -\frac{1}{2} & -\frac{3}{2} & \frac{5}{2}\\
+0 & 0 & -2 & -1 & -1 & 1
+\end{bmatrix}
+\begin{matrix}
+\div -3\\
+\div -2\\
+\div -2
+\end{matrix} \Rightarrow  \begin{bmatrix}
+1 & 0 & 0 & -\frac{1}{3} & \frac{1}{3} & -\frac{2}{3}\\
+0 & 1 & 0 & \frac{1}{4} & \frac{3}{4} & -\frac{5}{4}\\
+0 & 0 & 1 & \frac{1}{2} & \frac{1}{2} & -\frac{1}{2}
+\end{bmatrix}
+$$
+
+Therefore the inverse is:
+
+$$
+A=
+\begin{bmatrix}
+1 & 0 & 0 & -\frac{1}{3} & \frac{1}{3} & -\frac{2}{3}\\
+0 & 1 & 0 & \frac{1}{4} & \frac{3}{4} & -\frac{5}{4}\\
+0 & 0 & 1 & \frac{1}{2} & \frac{1}{2} & -\frac{1}{2}
+\end{bmatrix}
+$$
+
+#### Elementary matrices and LU decomposition
+
+Gaussian elimination returns a matrix $A$ as an upper triangular matrix
+
+This cal also be expressed as an upper triangular matrix $U$ multiplied by a lower triangular matrix $L$
+
+This is referred to as a matrix decomposition
+
+$$
+A = \begin{bmatrix}
+-3 & 2 & -1 \\
+6 & -6 & 7 \\
+3 & -4 & 4
+\end{bmatrix}
+$$
+
+$$
+\begin{bmatrix}
+\color{red}{-3} & 2 & -1 \\
+6 & -6 & 7 \\
+3 & -4 & 4
+\end{bmatrix}
+\begin{matrix}
+{} \\
+{} + 2 \times Row 1\\
+{}
+\end{matrix} \Rightarrow  \begin{bmatrix}
+-3 & 2 & -1 \\
+0 & -2 & 5 \\
+3 & -4 & 4
+\end{bmatrix} = M_1 A
+$$
+
+As we added $2\times$ the first row to the second, the first elementary matrix is:
+
+$$
+M_1 = \begin{bmatrix}
+1 & 0 & 0 \\
+2 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+$$
+
+$$
+\begin{bmatrix}
+\color{red}{-3} & 2 & -1 \\
+0 & -2 & 5 \\
+3 & -4 & 4
+\end{bmatrix}
+\begin{matrix}
+{} \\
+{} \\
+{} + 1 \times Row 1
+\end{matrix} \Rightarrow  \begin{bmatrix}
+-3 & 2 & -1 \\
+0 & -2 & 5 \\
+0 & -2 & 3
+\end{bmatrix} = M_2 M_1 A
+$$
+
+And so the second elementary matrix becomes:
+
+$$
+M_2 = \begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+1 & 0 & 1
+\end{bmatrix}
+$$
+
+$$
+\begin{bmatrix}
+-3 & 2 & -1 \\
+0 & \color{red}{-2} & 5 \\
+0 & -2 & 3
+\end{bmatrix}
+\begin{matrix}
+{} \\
+{} \\
+{} + -1 \times Row 2
+\end{matrix} \Rightarrow  \begin{bmatrix}
+-3 & 2 & -1 \\
+0 & -2 & 5 \\
+0 & 0 & -2
+\end{bmatrix} = M_3 M_2 M_1 A = U
+$$
+
+And the third elementary matrix:
+
+$$
+M_3 = \begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & -1 & 1
+\end{bmatrix}
+$$
+
+Where:
+
+$$
+M_3 M_2 M_1 A = U
+$$
+
+$$
+\therefore A = M_1^{-1} M_2^{-1} M_3^{-1} U
+$$
+
+The inverses of the elementary matrices are found:
+
+$$
+M_1 = \begin{bmatrix}
+1 & 0 & 0 \\
+2 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix} M_2 = \begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+1 & 0 & 1
+\end{bmatrix} M_3 = \begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & -1 & 1
+\end{bmatrix}
+$$
+
+$$
+M_1^{-1} = \begin{bmatrix}
+1 & 0 & 0 \\
+-2 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix} M_2^{-1} = \begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+-1 & 0 & 1
+\end{bmatrix} M_3^{-1} = \begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 1 & 1
+\end{bmatrix}
+$$
+
+The elementary matrices are then multiplied:
+
+$$
+M_1^{-1} M_2^{-1} = \begin{bmatrix}
+1 & 0 & 0 \\
+-2 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix} \begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+-1 & 0 & 1
+\end{bmatrix} = \begin{bmatrix}
+1 & 0 & 0 \\
+-2 & 1 & 0 \\
+-1 & 0 & 1
+\end{bmatrix}
+$$
+
+$$
+(M_1^{-1} M_2^{-1}) M_3^{-1} = \begin{bmatrix}
+1 & 0 & 0 \\
+-2 & 1 & 0 \\
+-1 & 0 & 1
+\end{bmatrix} \begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 1 & 1
+\end{bmatrix} = \begin{bmatrix}
+1 & 0 & 0 \\
+-2 & 1 & 0 \\
+-1 & 1 & 1
+\end{bmatrix}
+$$
+
+And a lower triangular matrix is produced:
+
+$$
+L = \begin{bmatrix}
+1 & 0 & 0 \\
+-2 & 1 & 0 \\
+-1 & 1 & 1
+\end{bmatrix}
+$$
+
+$$
+\therefore A = L U
+$$
 
 ### Vector spaces
 
@@ -952,7 +1266,7 @@ $$
 
 #### Conservative vector fields
 
-### Arithemetic
+### Arithmetic
 
 #### Conservation of energy
 

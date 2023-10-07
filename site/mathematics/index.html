@@ -82,9 +82,7 @@
     </li>
     <li class="toctree-l4"><a class="reference internal" href="#computing-inverses">Computing inverses</a>
     </li>
-    <li class="toctree-l4"><a class="reference internal" href="#elementary-matrices">Elementary matrices</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#lu-decomposition">LU decomposition</a>
+    <li class="toctree-l4"><a class="reference internal" href="#elementary-matrices-and-lu-decomposition">Elementary matrices and LU decomposition</a>
     </li>
         </ul>
     </li>
@@ -342,7 +340,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#arithemetic">Arithemetic</a>
+    <li class="toctree-l3"><a class="reference internal" href="#arithmetic">Arithmetic</a>
         <ul>
     <li class="toctree-l4"><a class="reference internal" href="#conservation-of-energy">Conservation of energy</a>
     </li>
@@ -769,42 +767,54 @@ A A^{-1} = I
 \]</div>
 <p>We can make the following set of equations:</p>
 <div class="arithmatex">\[
-a x_{1} + b y_{1} = 1 \\
-a x_{2} + b y_{2} = 0 \\
-c x_{1} + d y_{1} = 0 \\
-c x_{2} + d y_{2} = 1
+\begin{align*}
+a x_{1} + b y_{1} &amp;= 1 \\
+a x_{2} + b y_{2} &amp;= 0 \\
+c x_{1} + d y_{1} &amp;= 0 \\
+c x_{2} + d y_{2} &amp;= 1
+\end{align*}
 \]</div>
 <p>Therefore:</p>
 <div class="arithmatex">\[
-y_{1} = \dfrac{-c}{d} x_{1} \\
-y_{2} = \dfrac{-a}{b} x_{2}
+\begin{align*}
+y_{1} &amp;= \dfrac{-c}{d} x_{1} \\
+y_{2} &amp;= \dfrac{-a}{b} x_{2}
+\end{align*}
 \]</div>
 <p>Finding x1:</p>
 <div class="arithmatex">\[
-a x_{1} + b y_{1} = 1 \\
-a x_{1} + b \dfrac{-c}{d} x_{1} = 1 \\
-x_{1}\left(\dfrac{ad}{d} - \dfrac{bc}{d}\right)= 1 \\
-x_{1} = \dfrac{d}{ad-bc}
+\begin{align*}
+a x_{1} + b y_{1} &amp;= 1 \\
+a x_{1} + b \dfrac{-c}{d} x_{1} &amp;= 1 \\
+x_{1}\left(\dfrac{ad}{d} - \dfrac{bc}{d}\right)&amp;= 1 \\
+x_{1} &amp;= \dfrac{d}{ad-bc}
+\end{align*}
 \]</div>
 <p>Finding y1:</p>
 <div class="arithmatex">\[
-y_{1} = \dfrac{-c}{d} x_{1} \\
-y_{1} = \dfrac{-c}{d} \dfrac{d}{ad-bc} \\
-y_{1} = \dfrac{-c}{ad-bc}
+\begin{align*}
+y_{1} &amp;= \dfrac{-c}{d} x_{1} \\
+y_{1} &amp;= \dfrac{-c}{d} \dfrac{d}{ad-bc} \\
+y_{1} &amp;= \dfrac{-c}{ad-bc}
+\end{align*}
 \]</div>
 <p>Finding x2:</p>
 <div class="arithmatex">\[
-c x_{2} + d y_{2} = 1 \\
-c x_{2} + d \dfrac{-a}{b} x_{2} = 1 \\
-x_{2}\left(\dfrac{cb}{b} - \dfrac{ad}{b}\right)= 1 \\
-x_{2} = \dfrac{b}{cb-ad} \\
-x_{2} = \dfrac{-b}{ad-bc}
+\begin{align*}
+c x_{2} + d y_{2} &amp;= 1 \\
+c x_{2} + d \dfrac{-a}{b} x_{2} &amp;= 1 \\
+x_{2}\left(\dfrac{cb}{b} - \dfrac{ad}{b}\right) &amp;= 1 \\
+x_{2} &amp;= \dfrac{b}{cb-ad} \\
+x_{2} &amp;= \dfrac{-b}{ad-bc}
+\end{align*}
 \]</div>
 <p>Finding y2:</p>
 <div class="arithmatex">\[
-y_{2} = \dfrac{-a}{b} x_{2} \\
-y_{2} = \dfrac{-a}{b} \dfrac{-b}{ad-bc} \\
-y_{2} = \dfrac{a}{ad-bc}
+\begin{align*}
+y_{2} &amp;= \dfrac{-a}{b} x_{2} \\
+y_{2} &amp;= \dfrac{-a}{b} \dfrac{-b}{ad-bc} \\
+y_{2} &amp;= \dfrac{a}{ad-bc}
+\end{align*}
 \]</div>
 <p>Therefore:</p>
 <div class="arithmatex">\[
@@ -825,8 +835,10 @@ Q^{-1} = Q^{T}
 \]</div>
 <p>Therefore:</p>
 <div class="arithmatex">\[
-Q Q^{T} = I \\
-Q^{T} Q = I
+\begin{align*}
+Q Q^{T} &amp;= I \\
+Q^{T} Q &amp;= I
+\end{align*}
 \]</div>
 <p>Both the rows and columns of an orthogonal matrix are orthogonal</p>
 <p>Orthogonal matrices preserve norms; for a matrix Q and column vector x the norm is:</p>
@@ -897,9 +909,11 @@ P A = (P I) A
 <p>These operations are performed on the matrix until an upper triangular matrix is formed</p>
 <p>An example is used below to demonstrate the process</p>
 <div class="arithmatex">\[
--3x_1+2x_2-x_3=-1\\
-6x_1-6x_2+7x_3=-7\\
-3x_1-4x_2+4x_3=-6
+\begin{align*}
+-3x_1+2x_2-x_3&amp;=-1\\
+6x_1-6x_2+7x_3&amp;=-7\\
+3x_1-4x_2+4x_3&amp;=-6
+\end{align*}
 \]</div>
 <p>First, the system of equations are written as a matrix multiplication</p>
 <div class="arithmatex">\[
@@ -928,7 +942,7 @@ P A = (P I) A
 <p>A pivot (red) is selected, and the rows below the pivot undergo operations to make any values directly below the pivot equal to zero</p>
 <div class="arithmatex">\[
  \begin{bmatrix}
-    \color{red}-3 &amp; 2 &amp; -1 &amp; -1\\
+    \color{red}{-3} &amp; 2 &amp; -1 &amp; -1\\
     6 &amp; -6 &amp; 7 &amp; -7\\
     3 &amp; -4 &amp; 4 &amp; -6
   \end{bmatrix}
@@ -946,7 +960,7 @@ P A = (P I) A
 <div class="arithmatex">\[
 \begin{bmatrix}
     -3 &amp; 2 &amp; -1 &amp; -1\\
-    0 &amp; \color{red}-2 &amp; 5 &amp; -9\\
+    0 &amp; \color{red}{-2} &amp; 5 &amp; -9\\
     0 &amp; -2 &amp; 3 &amp; -7
   \end{bmatrix}
  \begin{matrix}
@@ -961,22 +975,26 @@ P A = (P I) A
 \]</div>
 <p>This matrix can now be converted back into a system of equations to be solved by back substitution</p>
 <div class="arithmatex">\[
--3x_1+2x_2-x_3=-1\\
--2x_2+5x_3=-9\\
--2x_3=2
+\begin{align*}
+-3x_1+2x_2-x_3&amp;=-1\\
+-2x_2+5x_3&amp;=-9\\
+-2x_3&amp;=2\\
+x_3 &amp;= -1
+\end{align*}
 \]</div>
 <div class="arithmatex">\[
-x_3 = -1
+\begin{align*}
+-2 x_2 - 5&amp;=-9\\
+-2x_2&amp;=-4\\
+x_2&amp;=2
+\end{align*}
 \]</div>
 <div class="arithmatex">\[
--2 x_2 - 5=-9\\
--2x_2=-4\\
-x_2=2
-\]</div>
-<div class="arithmatex">\[
--3x_1+4+1=-1\\
--2x_1=-6\\
-x_1=2
+\begin{align*}
+-3x_1+4+1&amp;=-1\\
+-2x_1&amp;=-6\\
+x_1&amp;=2
+\end{align*}
 \]</div>
 <h4 id="reduced-row-echelon-form">Reduced row echelon form</h4>
 <p>The reduced row echelon form is an expansion on Gaussian elimination</p>
@@ -990,7 +1008,7 @@ x_1=2
 \]</div>
 <div class="arithmatex">\[
  \begin{bmatrix}
-    \color{red}1 &amp; 2 &amp; 3 &amp; 4\\
+    \color{red}{1} &amp; 2 &amp; 3 &amp; 4\\
     4 &amp; 5 &amp; 6 &amp; 7\\
     6 &amp; 7 &amp; 8 &amp; 9
   \end{bmatrix}
@@ -1023,7 +1041,7 @@ x_1=2
 <div class="arithmatex">\[
  \begin{bmatrix}
     1 &amp; 2 &amp; 3 &amp; 4\\
-    0 &amp; \color{red}1 &amp; 2 &amp; 3\\
+    0 &amp; \color{red}{1} &amp; 2 &amp; 3\\
     0 &amp; 1 &amp; 2 &amp; 3
   \end{bmatrix}
  \begin{matrix}
@@ -1044,8 +1062,266 @@ RREF(A) = \begin{bmatrix}
   \end{bmatrix}
 \]</div>
 <h4 id="computing-inverses">Computing inverses</h4>
-<h4 id="elementary-matrices">Elementary matrices</h4>
-<h4 id="lu-decomposition">LU decomposition</h4>
+<p>The reduced row echelon form can be used to find inverses of matrices</p>
+<div class="arithmatex">\[
+A = \begin{bmatrix}
+-3 &amp; 2 &amp; -1 \\
+6 &amp; -6 &amp; 7 \\
+3 &amp; -4 &amp; 4
+\end{bmatrix}
+\]</div>
+<p>For a matrix to be invertible:</p>
+<div class="arithmatex">\[
+\begin{align*}
+A A^{-1} &amp;= I \\
+A a_{i}^{-1} &amp;= e_i
+\end{align*}
+\]</div>
+<p>We combine the identity matrix and the original matrix for the augmented matrix:</p>
+<div class="arithmatex">\[
+\begin{bmatrix}
+-3 &amp; 2 &amp; -1 &amp; 1 &amp; 0 &amp; 0\\
+6 &amp; -6 &amp; 7 &amp; 0 &amp; 1 &amp; 0\\
+3 &amp; -4 &amp; 4 &amp; 0 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</div>
+<p>And calculate the reduced row echelon form:</p>
+<div class="arithmatex">\[
+\begin{bmatrix}
+\color{red}{-3} &amp; 2 &amp; -1 &amp; 1 &amp; 0 &amp; 0\\
+6 &amp; -6 &amp; 7 &amp; 0 &amp; 1 &amp; 0\\
+3 &amp; -4 &amp; 4 &amp; 0 &amp; 0 &amp; 1
+\end{bmatrix}
+\begin{matrix}
+{}\\
+{}+ 2 \times Row 1\\
+{}+ 1 \times Row 1
+\end{matrix} \Rightarrow  \begin{bmatrix}
+-3 &amp; 2 &amp; -1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; -2 &amp; 5 &amp; 2&amp; 1 &amp; 0\\
+0 &amp; -2 &amp; 3 &amp; 1 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+\begin{bmatrix}
+-3 &amp; 2 &amp; -1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; \color{red}{-2} &amp; 5 &amp; 2&amp; 1 &amp; 0\\
+0 &amp; -2 &amp; 3 &amp; 1 &amp; 0 &amp; 1
+\end{bmatrix}
+\begin{matrix}
+{}+ 1 \times Row 2\\
+{}\\
+{}+ -1 \times Row 2
+\end{matrix} \Rightarrow  \begin{bmatrix}
+-3 &amp; 0 &amp; 4 &amp; 3 &amp; 1 &amp; 0\\
+0 &amp; -2 &amp; 5 &amp; 2&amp; 1 &amp; 0\\
+0 &amp; 0 &amp; -2 &amp; -1 &amp; -1 &amp; 1
+\end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+\begin{bmatrix}
+-3 &amp; 0 &amp; 4 &amp; 3 &amp; 1 &amp; 0\\
+0 &amp; -2 &amp; 5 &amp; 2&amp; 1 &amp; 0\\
+0 &amp; 0 &amp; \color{red}{-2} &amp; -1 &amp; -1 &amp; 1
+\end{bmatrix}
+\begin{matrix}
+{}+ 2 \times Row 3\\
+{}+ 2.5 \times Row 3\\
+{}
+\end{matrix} \Rightarrow  \begin{bmatrix}
+-3 &amp; 0 &amp; 0 &amp; 1 &amp; -1 &amp; 2\\
+0 &amp; -2 &amp; 0 &amp; -\frac{1}{2} &amp; -\frac{3}{2} &amp; \frac{5}{2}\\
+0 &amp; 0 &amp; -2 &amp; -1 &amp; -1 &amp; 1
+\end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+\begin{bmatrix}
+-3 &amp; 0 &amp; 0 &amp; 1 &amp; -1 &amp; 2\\
+0 &amp; -2 &amp; 0 &amp; -\frac{1}{2} &amp; -\frac{3}{2} &amp; \frac{5}{2}\\
+0 &amp; 0 &amp; -2 &amp; -1 &amp; -1 &amp; 1
+\end{bmatrix}
+\begin{matrix}
+\div -3\\
+\div -2\\
+\div -2
+\end{matrix} \Rightarrow  \begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; -\frac{1}{3} &amp; \frac{1}{3} &amp; -\frac{2}{3}\\
+0 &amp; 1 &amp; 0 &amp; \frac{1}{4} &amp; \frac{3}{4} &amp; -\frac{5}{4}\\
+0 &amp; 0 &amp; 1 &amp; \frac{1}{2} &amp; \frac{1}{2} &amp; -\frac{1}{2}
+\end{bmatrix}
+\]</div>
+<p>Therefore the inverse is:</p>
+<div class="arithmatex">\[
+A=
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; -\frac{1}{3} &amp; \frac{1}{3} &amp; -\frac{2}{3}\\
+0 &amp; 1 &amp; 0 &amp; \frac{1}{4} &amp; \frac{3}{4} &amp; -\frac{5}{4}\\
+0 &amp; 0 &amp; 1 &amp; \frac{1}{2} &amp; \frac{1}{2} &amp; -\frac{1}{2}
+\end{bmatrix}
+\]</div>
+<h4 id="elementary-matrices-and-lu-decomposition">Elementary matrices and LU decomposition</h4>
+<p>Gaussian elimination returns a matrix <span class="arithmatex">\(A\)</span> as an upper triangular matrix</p>
+<p>This cal also be expressed as an upper triangular matrix <span class="arithmatex">\(U\)</span> multiplied by a lower triangular matrix <span class="arithmatex">\(L\)</span></p>
+<p>This is referred to as a matrix decomposition</p>
+<div class="arithmatex">\[
+A = \begin{bmatrix}
+-3 &amp; 2 &amp; -1 \\
+6 &amp; -6 &amp; 7 \\
+3 &amp; -4 &amp; 4
+\end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+\begin{bmatrix}
+\color{red}{-3} &amp; 2 &amp; -1 \\
+6 &amp; -6 &amp; 7 \\
+3 &amp; -4 &amp; 4
+\end{bmatrix}
+\begin{matrix}
+{} \\
+{} + 2 \times Row 1\\
+{}
+\end{matrix} \Rightarrow  \begin{bmatrix}
+-3 &amp; 2 &amp; -1 \\
+0 &amp; -2 &amp; 5 \\
+3 &amp; -4 &amp; 4
+\end{bmatrix} = M_1 A
+\]</div>
+<p>As we added <span class="arithmatex">\(2\times\)</span> the first row to the second, the first elementary matrix is:</p>
+<div class="arithmatex">\[
+M_1 = \begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+2 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+\begin{bmatrix}
+\color{red}{-3} &amp; 2 &amp; -1 \\
+0 &amp; -2 &amp; 5 \\
+3 &amp; -4 &amp; 4
+\end{bmatrix}
+\begin{matrix}
+{} \\
+{} \\
+{} + 1 \times Row 1
+\end{matrix} \Rightarrow  \begin{bmatrix}
+-3 &amp; 2 &amp; -1 \\
+0 &amp; -2 &amp; 5 \\
+0 &amp; -2 &amp; 3
+\end{bmatrix} = M_2 M_1 A
+\]</div>
+<p>And so the second elementary matrix becomes:</p>
+<div class="arithmatex">\[
+M_2 = \begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+1 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+\begin{bmatrix}
+-3 &amp; 2 &amp; -1 \\
+0 &amp; \color{red}{-2} &amp; 5 \\
+0 &amp; -2 &amp; 3
+\end{bmatrix}
+\begin{matrix}
+{} \\
+{} \\
+{} + -1 \times Row 2
+\end{matrix} \Rightarrow  \begin{bmatrix}
+-3 &amp; 2 &amp; -1 \\
+0 &amp; -2 &amp; 5 \\
+0 &amp; 0 &amp; -2
+\end{bmatrix} = M_3 M_2 M_1 A = U
+\]</div>
+<p>And the third elementary matrix:</p>
+<div class="arithmatex">\[
+M_3 = \begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; -1 &amp; 1
+\end{bmatrix}
+\]</div>
+<p>Where:</p>
+<div class="arithmatex">\[
+M_3 M_2 M_1 A = U
+\]</div>
+<div class="arithmatex">\[
+\therefore A = M_1^{-1} M_2^{-1} M_3^{-1} U
+\]</div>
+<p>The inverses of the elementary matrices are found:</p>
+<div class="arithmatex">\[
+M_1 = \begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+2 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix} M_2 = \begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+1 &amp; 0 &amp; 1
+\end{bmatrix} M_3 = \begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; -1 &amp; 1
+\end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+M_1^{-1} = \begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+-2 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix} M_2^{-1} = \begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+-1 &amp; 0 &amp; 1
+\end{bmatrix} M_3^{-1} = \begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 1
+\end{bmatrix}
+\]</div>
+<p>The elementary matrices are then multiplied:</p>
+<div class="arithmatex">\[
+M_1^{-1} M_2^{-1} = \begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+-2 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix} \begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+-1 &amp; 0 &amp; 1
+\end{bmatrix} = \begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+-2 &amp; 1 &amp; 0 \\
+-1 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+(M_1^{-1} M_2^{-1}) M_3^{-1} = \begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+-2 &amp; 1 &amp; 0 \\
+-1 &amp; 0 &amp; 1
+\end{bmatrix} \begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 1
+\end{bmatrix} = \begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+-2 &amp; 1 &amp; 0 \\
+-1 &amp; 1 &amp; 1
+\end{bmatrix}
+\]</div>
+<p>And a lower triangular matrix is produced:</p>
+<div class="arithmatex">\[
+L = \begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+-2 &amp; 1 &amp; 0 \\
+-1 &amp; 1 &amp; 1
+\end{bmatrix}
+\]</div>
+<div class="arithmatex">\[
+\therefore A = L U
+\]</div>
 <h3 id="vector-spaces">Vector spaces</h3>
 <h4 id="introduction-to-vector-spaces">Introduction to vector spaces</h4>
 <h4 id="linear-independence">Linear independence</h4>
@@ -1160,7 +1436,7 @@ RREF(A) = \begin{bmatrix}
 <h3 id="fundamental-theorems">Fundamental theorems</h3>
 <h4 id="gradient-theorem">Gradient theorem</h4>
 <h4 id="conservative-vector-fields">Conservative vector fields</h4>
-<h3 id="arithemetic">Arithemetic</h3>
+<h3 id="arithmetic">Arithmetic</h3>
 <h4 id="conservation-of-energy">Conservation of energy</h4>
 <h4 id="divergence-theorem">Divergence theorem</h4>
 <h4 id="continuity-equation">Continuity equation</h4>
